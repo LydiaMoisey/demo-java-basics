@@ -8,8 +8,7 @@ public class News {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите количество новостей");
         int numberOfNews = scanner.nextInt();
-        CalculatorOfNewPages number = new CalculatorOfNewPages();
-        int numberOfPages = number.calculateNumberOfPages(numberOfNews);
+        int numberOfPages = (int) Math.ceil(numberOfNews / 10.0);
         System.out.println("Количество страниц для " + numberOfNews + " новостей - " + numberOfPages);
     }
 }
